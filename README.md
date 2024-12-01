@@ -1,6 +1,6 @@
-# Advent of Code 2023 Solutions
+# Advent of Code
 
-This repository contains my solutions to the Advent of Code 2023 challenges. Advent of Code is an annual set of Christmas-themed programming puzzles that cover a variety of skill sets and skill levels and can be solved in any programming language you like.
+This repository contains my solutions to the Advent of Code 2023 and 2024 challenges. Advent of Code is an annual set of Christmas-themed programming puzzles that cover a variety of skill sets and skill levels and can be solved in any programming language you like.
 
 ## About Advent of Code
 
@@ -14,16 +14,28 @@ This repository is organized as follows:
 
 ```
 /
-├── Day01/
-│   ├── solution.py
-│   └── input.txt
-├── Day02/
-│   ├── solution.py
-│   └── input.txt
-...
-└── Day25/
-    ├── solution.py
-    └── input.txt
+├── 2023/
+│   ├── Day01/
+│   │   ├── solution.py
+│   │   └── input.txt
+│   ├── Day02/
+│   │   ├── solution.py
+│   │   └── input.txt
+│   ...
+│   └── Day25/
+│       ├── solution.py
+│       └── input.txt
+├── 2024/
+│   ├── Day01/
+│   │   ├── solution.py
+│   │   └── input.txt
+│   ├── Day02/
+│   │   ├── solution.py
+│   │   └── input.txt
+│   ...
+│   └── Day25/
+│       ├── solution.py
+│       └── input.txt
 ```
 
 Each day's challenge is contained in its own directory, with a `solution.py` file containing the code and an `input.txt` file containing the puzzle input.
