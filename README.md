@@ -1,4 +1,6 @@
-# Advent of Code
+![Banner Image](Banner.png)
+
+---
 
 This repository contains my solutions to the Advent of Code 2023 and 2024 challenges. Advent of Code is an annual set of Christmas-themed programming puzzles that cover a variety of skill sets and skill levels and can be solved in any programming language you like.
 
