@@ -32,8 +32,6 @@ def find_safe_reports_v2(lines):
             safe_records += 1
         elif is_safe_record_v2(record):
             safe_records += 1
-        else:
-            pass
     return safe_records
 
 

@@ -85,8 +85,6 @@ def helper(grid):
             elif grid[r][c] == "A":
                 if find_mas(r, c, grid):
                     mas_count += 1
-            else:
-                pass
 
     return xmas_count, mas_count
 
