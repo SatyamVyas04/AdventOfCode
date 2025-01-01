@@ -15,9 +15,9 @@ def parse_draw(draw_string):
     return counts
 
 
-def calculate_possible_games_sum(filename):
+def calculate_possible_games_sum():
     limits = {"red": 12, "green": 13, "blue": 14}
-    with open(filename, 'r') as file:
+    with open("input.txt", 'r') as file:
         total = 0
         for line in file:
             game_id, draws = parse_game(line)
@@ -26,8 +26,8 @@ def calculate_possible_games_sum(filename):
     return total
 
 
-def calculate_power_sum(filename):
-    with open(filename, 'r') as file:
+def calculate_power_sum():
+    with open("input.txt", 'r') as file:
         total = 0
         for line in file:
             _, draws = parse_game(line)
