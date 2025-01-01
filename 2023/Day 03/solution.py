@@ -29,11 +29,14 @@ def find_adjacents(lines):
 
             for di, dj in directions:
                 ni, nj = i + di, j + dj
-                if 0 <= ni < len(lines) and 0 <= nj < len(lines[ni]) and lines[ni][nj].isdigit():
-                    if (lines[ni], nj) not in visited:
-                        number = find_number_scan(lines[ni], nj, visited)
-                        if number is not None:
-                            total_sum += number
+                if (
+                    0 <= ni < len(lines) and 0 <= nj < len(lines[ni])
+                    and lines[ni][nj].isdigit()
+                    and (lines[ni], nj) not in visited
+                ):
+                    number = find_number_scan(lines[ni], nj, visited)
+                    if number is not None:
+                        total_sum += number
 
     return total_sum
 
@@ -53,12 +56,15 @@ def find_gear_ratio(lines):
                 count = 0
                 for di, dj in directions:
                     ni, nj = i + di, j + dj
-                    if 0 <= ni < len(lines) and 0 <= nj < len(lines[ni]) and lines[ni][nj].isdigit():
-                        if (lines[ni], nj) not in visited:
-                            number = find_number_scan(lines[ni], nj, visited)
-                            if number is not None:
-                                gear_ratio *= number
-                                count += 1
+                    if (
+                        0 <= ni < len(lines) and 0 <= nj < len(lines[ni])
+                        and lines[ni][nj].isdigit()
+                        and (lines[ni], nj) not in visited
+                    ):
+                        number = find_number_scan(lines[ni], nj, visited)
+                        if number is not None:
+                            gear_ratio *= number
+                            count += 1
                 if count > 1:
                     total_sum += gear_ratio
 
