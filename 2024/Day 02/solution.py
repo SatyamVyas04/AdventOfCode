@@ -1,7 +1,7 @@
 def is_safe_record(record):
     if (
         sorted(record) in [record, record[::-1]]
-        and all([1 <= abs(record[idx] - record[idx - 1]) <= 3 for idx in range(1, len(record))])
+        and all(1 <= abs(record[idx] - record[idx - 1]) <= 3 for idx in range(1, len(record)))
     ):
         return True
     return False
