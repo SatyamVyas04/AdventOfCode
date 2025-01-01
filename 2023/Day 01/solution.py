@@ -19,8 +19,8 @@ def replace_spelled_numbers(word):
     return result
 
 
-def calculate_calibration(filename):
-    with open(filename, 'r') as file:
+def calculate_calibration():
+    with open("input.txt", 'r') as file:
         total = 0
         for line in file:
             digits = [char for char in line if char.isdigit()]
@@ -29,8 +29,8 @@ def calculate_calibration(filename):
     return total
 
 
-def calculate_calibration_with_replacement(filename):
-    with open(filename, 'r') as file:
+def calculate_calibration_with_replacement():
+    with open("input.txt", 'r') as file:
         total = 0
         for line in file:
             processed_line = replace_spelled_numbers(line)
@@ -42,7 +42,7 @@ def calculate_calibration_with_replacement(filename):
 
 if __name__ == "__main__":
     filename = 'input.txt'
-    part1_result = calculate_calibration(filename)
-    part2_result = calculate_calibration_with_replacement(filename)
+    part1_result = calculate_calibration()
+    part2_result = calculate_calibration_with_replacement()
     print(f"Calibration Value: {part1_result}")
     print(f"Calibration Value with replacements: {part2_result}")

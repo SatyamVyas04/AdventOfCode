@@ -42,7 +42,7 @@ def calculate_power_sum():
 
 if __name__ == "__main__":
     filename = 'input.txt'
-    part1_result = calculate_possible_games_sum(filename)
-    part2_result = calculate_power_sum(filename)
+    part1_result = calculate_possible_games_sum()
+    part2_result = calculate_power_sum()
     print(f"Sum of possible game IDs: {part1_result}")
     print(f"Sum of game powers: {part2_result}")
