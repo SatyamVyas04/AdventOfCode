@@ -8,9 +8,7 @@ def is_safe_record(record):
 
 
 def find_safe_reports(lines):
-    '''
-    Solves the first part of the problem
-    '''
+    '''Solves the first part of the problem'''
     safe_records = 0
     for record in lines:
         if is_safe_record(record):
@@ -25,9 +23,7 @@ def is_safe_record_v2(record):
 
 
 def find_safe_reports_v2(lines):
-    '''
-    Solves the second part of the problem
-    '''
+    '''Solves the second part of the problem'''
     safe_records = 0
     for record in lines:
         if is_safe_record(record):

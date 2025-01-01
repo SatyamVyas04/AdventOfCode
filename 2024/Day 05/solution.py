@@ -10,9 +10,7 @@ def create_graph(deps):
 
 
 def topological_sort(graph, task):
-    '''
-    Perform topological sort to reorder the task based on dependencies
-    '''
+    '''Perform topological sort to reorder the task based on dependencies'''
     depends_on = defaultdict(set)
     for node in task:
         for other in task:
@@ -42,9 +40,7 @@ def topological_sort(graph, task):
 
 
 def check_deps(graph, task):
-    '''
-    Check if the task is in the correct order based on dependencies
-    '''
+    '''Check if the task is in the correct order based on dependencies'''
     pages_done = set()
     pages_needed = set(task)
     for t in task:
