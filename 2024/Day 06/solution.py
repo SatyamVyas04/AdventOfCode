@@ -8,11 +8,13 @@ def scan_obstacles(grid):
                 yield (r, c)
 
 
-def guard_simulation(grid, obstacles, r, c, directions=[(-1, 0), (0, 1), (1, 0), (0, -1)], idx=0):
+def guard_simulation(grid, obstacles, r, c, directions=None, idx=0):
     """
     Simulates the guard's movement for Part 1.
     Tracks visited positions until the guard leaves the grid.
     """
+    if directions is None:
+        directions = [(-1, 0), (0, 1), (1, 0), (0, -1)]
     visited = set([(r, c)])
 
     while 0 <= r < len(grid) and 0 <= c < len(grid[0]):
@@ -32,11 +34,13 @@ def guard_simulation(grid, obstacles, r, c, directions=[(-1, 0), (0, 1), (1, 0),
     return visited
 
 
-def guard_simulation_2(grid, obstacles, r, c, visited, directions=[(-1, 0), (0, 1), (1, 0), (0, -1)], idx=0):
+def guard_simulation_2(grid, obstacles, r, c, visited, directions=None, idx=0):
     """
     Simulates the guard's movement for Part 2.
     Detects if the guard enters a loop by revisiting a state.
     """
+    if directions is None:
+        directions = [(-1, 0), (0, 1), (1, 0), (0, -1)]
     while 0 <= r < len(grid) and 0 <= c < len(grid[0]):
         dr, dc = directions[idx]
         next_r, next_c = r + dr, c + dc
@@ -57,11 +61,13 @@ def guard_simulation_2(grid, obstacles, r, c, visited, directions=[(-1, 0), (0, 
     return False
 
 
-def helper(grid, obstacles, candidates, guard_r, guard_c, directions=[(-1, 0), (0, 1), (1, 0), (0, -1)], idx=0):
+def helper(grid, obstacles, candidates, guard_r, guard_c, directions=None, idx=0):
     """
     Helper function for Part 2.
     Tries placing obstacles at each "." position and checks if a loop forms.
     """
+    if directions is None:
+        directions = [(-1, 0), (0, 1), (1, 0), (0, -1)]
     ans = 0
     for (r, c) in candidates:
         if grid[r][c] == "." and (r, c) != (guard_r, guard_c):
