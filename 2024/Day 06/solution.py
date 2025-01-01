@@ -1,7 +1,5 @@
 def scan_obstacles(grid):
-    """
-    Scans the grid for obstacles (#) and returns their positions.
-    """
+    """Scans the grid for obstacles (#) and returns their positions."""
     for r in range(len(grid)):
         for c in range(len(grid[0])):
             if grid[r][c] == "#":

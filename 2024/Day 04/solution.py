@@ -11,9 +11,7 @@ directions = [
 
 
 def dfs(grid, r, c, word, direction):
-    '''
-    Solves part 1 of the problem
-    '''
+    '''Solves part 1 of the problem'''
     word_length = len(word)
     path = []
 
@@ -48,9 +46,7 @@ def dfs(grid, r, c, word, direction):
 
 
 def find_mas(r, c, grid):
-    '''
-    Solves part 2 of the problem
-    '''
+    '''Solves part 2 of the problem'''
     diagonals = directions[4:]
     for dr, dc in diagonals:
         if 0 <= r + dr < len(grid) and 0 <= c + dc < len(grid[0]) and grid[r + dr][c + dc] in ['M', 'S']:

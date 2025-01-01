@@ -13,9 +13,7 @@ def left_right_divides(lines):
 
 
 def pair_difference(left, right):
-    '''
-    Solves the first part of the problem
-    '''
+    '''Solves the first part of the problem'''
     left = sorted(left)
     right = sorted(right)
     l, r = 0, 0
@@ -35,9 +33,7 @@ def hashmap_generation(right):
 
 
 def return_similarity_score(left, hashmap):
-    '''
-    Solves the second part of the problem
-    '''
+    '''Solves the second part of the problem'''
     ans = 0
     for l in left:
         ans += l * hashmap[l]
